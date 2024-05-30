@@ -10,6 +10,15 @@ This innovative method not only improves the fidelity of scene reconstruction bu
 
 # **Introduction**
 
+NeRF (Neural Radiance Fields) is a groundbreaking algorithm for synthesizing novel views of complex scenes with photorealistic quality. This method represents scenes using a continuous volumetric scene function optimized with a sparse set of input views, enabling the rendering of scenes with intricate geometry and appearance.
+
+NeRF leverages a fully-connected deep network to model scenes, allowing for high-fidelity rendering of scenes from novel viewpoints. By learning the radiance field of a scene, NeRF can generate images with realistic lighting, reflections, and shadows. The algorithm excels at capturing fine details and complex lighting effects, making it a powerful tool for computer graphics and virtual reality applications.
+
+Key Features
+- High-Quality Rendering: NeRF produces images with exceptional visual quality, capturing intricate scene details and realistic lighting effects.
+- View Synthesis: The algorithm can generate novel views of a scene from arbitrary viewpoints, enabling virtual exploration of 3D environments.
+- Sparse Input Views: NeRF requires only a sparse set of input views to optimize the scene representation, making it efficient and scalable for complex scenes.
+- Photorealistic Results: By modeling the radiance field, NeRF achieves photorealistic rendering that rivals traditional rendering techniques.
 
 # **Usage**
 
