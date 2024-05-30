@@ -24,8 +24,11 @@ Key Features
 
 # **Results**
 ![Alt text](images/photo1717009339.jpeg)
-![Alt text](images/photo1717009339 (1).jpeg)
-![Alt text](photo1717009339 (2).jpeg)
+![Alt text](images/photo1717009330.jpeg)
+![Alt text](images/photo1717009338.jpeg)
+![Alt text](images/mse.jpeg)
+![Alt text](images/pnsr.jpeg)
+![Alt text](images/ssim.jpeg)
 # **Usage**
 
 Clone the Repository
