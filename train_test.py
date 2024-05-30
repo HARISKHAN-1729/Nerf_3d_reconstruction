@@ -3,6 +3,7 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 from utils import render_rays
 from losses import mse, psnr, ssim
+import time 
 
 @torch.no_grad()
 def test(nerf_model, dataset, hn, hf, chunk_size=10, img_index=0, nb_bins=192, H=400, W=400, device='cpu'):
@@ -25,6 +26,7 @@ def test(nerf_model, dataset, hn, hf, chunk_size=10, img_index=0, nb_bins=192, H
         None
     """
     # Extract ray origins and directions for the current image
+    start_time=time.time()
     ray_origins = dataset[img_index * H * W: (img_index + 1) * H * W, :3]
     ray_directions = dataset[img_index * H * W: (img_index + 1) * H * W, 3:6]
     ground_truth_image = dataset[img_index * H * W: (img_index + 1) * H * W, 6:].reshape(H, W, 3)
@@ -41,6 +43,10 @@ def test(nerf_model, dataset, hn, hf, chunk_size=10, img_index=0, nb_bins=192, H
 
     # Concatenate and reshape the data to form an image
     img = torch.cat(data).data.cpu().numpy().reshape(H, W, 3)
+    end_time=time.time()
+    # Calculate render time in seconds
+    render_time = end_time - start_time
+
 
     # Clamp the values to be in the range [0, 1]
     img = np.clip(img, 0, 1)
@@ -55,7 +61,7 @@ def test(nerf_model, dataset, hn, hf, chunk_size=10, img_index=0, nb_bins=192, H
     ssim_value = ssim(rendered_image, ground_truth_image).item()
 
     # Print the computed metrics
-    print(f"Image {img_index}: MSE: {mse_value}, PSNR: {psnr_value}, SSIM: {ssim_value}")
+    print(f"Image {img_index}: MSE: {mse_value}, PSNR: {psnr_value}, SSIM: {ssim_value} , Render Time: {render_time:.4f} seconds")
 
     # Plot and save the rendered image
     plt.figure()
