@@ -27,8 +27,10 @@ Key Features
 ![Alt text](images/photo1717009330.jpeg)
 ![Alt text](images/photo1717009338.jpeg)
 ![Alt text](images/mse.jpeg)
-![Alt text](images/pnsr.jpeg)
+![Alt text](images/psnr.jpeg)
 ![Alt text](images/ssim.jpeg)
+
+
 # **Usage**
 
 Clone the Repository
