@@ -20,6 +20,12 @@ Key Features
 - Sparse Input Views: NeRF requires only a sparse set of input views to optimize the scene representation, making it efficient and scalable for complex scenes.
 - Photorealistic Results: By modeling the radiance field, NeRF achieves photorealistic rendering that rivals traditional rendering techniques.
 
+![Alt text](images/nerd.png)
+
+# **Results**
+![Alt text](images/photo1717009339.jpeg)
+![Alt text](images/photo1717009339 (1).jpeg)
+![Alt text](photo1717009339 (2).jpeg)
 # **Usage**
 
 Clone the Repository
